@@ -56,7 +56,7 @@ export default defineConfig({
 
 ## Темизация и анимации
 
-Тема переключается через класс `dark` на <html> (Tailwind darkMode: 'class').
+Тема переключается через класс `dark` на `<html>` (Tailwind darkMode: 'class').
 
 Для заголовка задана увеличенная высота строки `leading-[1.15]` и `py-1`, чтобы не резались глифы.
 
