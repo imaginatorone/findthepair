@@ -29,14 +29,16 @@ git clone https://github.com/imaginatorone/findthepair.git
 cd findthepair
 npm install
 npm run dev
-# и откройте адрес из консоли (обычно http://localhost:5173)```
+# и откройте адрес из консоли (обычно http://localhost:5173)
+```
 
 ---
 
 ## Сборка
 ```bash
 npm run build
-npm run preview```
+npm run preview
+```
 
 ---
 
@@ -49,7 +51,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/findthepair/',
-})```
+})
+```
 
 ## Темизация и анимации
 
