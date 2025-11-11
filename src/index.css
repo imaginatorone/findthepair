@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, sans-serif;
+    @apply bg-gray-50 dark:bg-dark-bg text-gray-900 dark:text-gray-100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+    }
+  }
+}
+
+/* Component classes */
+@layer components {
+  .tile-base {
+    @apply relative w-16 h-16 sm:w-20 sm:h-20 rounded-lg cursor-pointer flex items-center justify-center text-xl font-bold transition-all duration-300 shadow-md;
+  }
+  .tile-hover {
+    @apply hover:shadow-lg hover:scale-105 active:scale-95;
+  }
+  .tile-closed {
+    @apply bg-gray-300 dark:bg-dark-tile border-2 border-gray-200 dark:border-gray-700;
+  }
+  .tile-open {
+    @apply shadow-lg border-0;
+  }
+}
+
+/* Utility helpers for 3D flip */
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .perspective-600 {
+    perspective: 600px;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
